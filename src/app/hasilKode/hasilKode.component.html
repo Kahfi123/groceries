@@ -1,0 +1,41 @@
+
+<h2 align="center">Informasi Tiket</h2>
+<h5 align = "center" style="color:red">{{info}}</h5>
+
+
+  <table width = "800" align = "center" border = 1>
+    <tr>
+      <td colspan = 5><h4>Info Tiket</h4></td>
+    </tr>
+    <tr>
+      <th>Kode Booking</th>
+      <th>Kode Pembayaran</th>
+      <th>Nama Pemesanan</th>
+    </tr>
+    <tr>
+      <td>{{kode_booking}}</td>
+      <td>{{kode_pembayaran}}</td>
+      <td>{{nama_pemesan}}</td>
+    </tr><tr>
+      <tr>
+        <td colspan = 5><h4>Info Penumpang</h4></td>
+      </tr>
+      <tr>
+        <th>No</th>
+        <th>Nama Penumpang</th>
+        <th>Nomor Identitas</th>
+
+
+      </tr>
+      <tr *ngFor="let a of array_penumpang; let index = index">
+        <td>{{index+1}}</td>
+        <td>{{a.nama_penumpang}}</td>
+        <td>{{a.nomor_identitas}}</td>
+      </tr>
+
+
+  </table>
+
+
+  <br>
+  <p align="center"><a [routerLink]="['/cekKodeBooking']" class="btn btn-primary" style="background-color:#262626">Kembali</a>
